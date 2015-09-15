@@ -55,4 +55,13 @@ class Api::V1::ItemsControllerTest < ActionController::TestCase
     refute_equal old_item.name, new_item.name
     refute_equal old_item.description, new_item.description
   end
+
+  test '#destroy' do
+    #two args for below assert
+    assert_difference('Item.count', -1) do
+      delete :destroy, format: :json, id: Item.first.id
+    end
+
+    assert_response :success
+  end
 end
