@@ -30,6 +30,10 @@ class Api::V1::ItemsControllerTest < ActionController::TestCase
     item_params = { name: 'Arya', description: 'Is not blind' }
     post :create, format: :json, item: item_params
 
+    item = Item.last
+
     assert_response :success
+    assert_equal 'Arya', item.name
+    assert_equal 'Is not blind', item.description
   end
 end
