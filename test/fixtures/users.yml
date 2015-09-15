@@ -1,0 +1,10 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: Jon Snow
+  email: rules@rules.com
+
+two:
+  name: Lannister
+  email: sucks@sucks.com
+
